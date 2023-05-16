@@ -1,4 +1,65 @@
 .main-content {
   grid-area: main-content;
-  background: yellow;
+  background: #0f0f0f;
+}
+
+.main-content__tile {
+  height: 202px;
+  margin-left: 48px;
+  margin-right: 48px;
+  margin-top: 16px;
+  color: #fff;
+  display: flex;
+}
+
+.main-content__image {
+  border-radius: 10px;
+}
+
+.main-content__video-info {
+  padding-left: 16px;
+}
+.main-content__header {
+  margin-top: 0;
+  margin-bottom: 0px;
+  font-size: 18px;
+  padding-right: 40px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.main-content__views {
+  color: #aaaaaa;
+  font-size: 12px;
+}
+
+.main-content__dot {
+  color: #aaaaaa;
+  font-size: 12px;
+}
+
+.main-content__uploaded {
+  color: #aaaaaa;
+  font-size: 12px;
+}
+
+.main-content__channel-container {
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+  padding-bottom: 14px;
+}
+
+.main-content__icon {
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.main-content__channel {
+  color: #aaaaaa;
+  font-size: 12px;
+}
+.main-content__description {
+  color: #aaaaaa;
+  font-size: 12px;
 }

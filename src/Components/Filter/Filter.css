@@ -16,7 +16,6 @@
 
 .filter__button {
   height: 32px;
-  outline: 1px solid black;
   display: flex;
   align-items: center;
   background-color: #3f3f3f;
