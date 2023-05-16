@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -16,7 +16,7 @@ const YouTubeSearch = () => {
           params: {
             part: "snippet",
             q: searchTerm,
-            maxResults: 5,
+            maxResults: 10,
             key: "AIzaSyBy1-TkNKbIUTqh7TOpZYKhl2cysl7JriI",
             type: "video",
           },
@@ -66,6 +66,48 @@ const YouTubeSearch = () => {
     }
   };
 
+  useEffect(() => {
+    const fetchChannelDetails = async (channelId) => {
+      try {
+        const response = await axios.get(
+          "https://www.googleapis.com/youtube/v3/channels",
+          {
+            params: {
+              part: "snippet",
+              id: channelId,
+              key: "AIzaSyBy1-TkNKbIUTqh7TOpZYKhl2cysl7JriI",
+            },
+          }
+        );
+
+        if (response.data.items.length > 0) {
+          const channel = response.data.items[0];
+          return channel.snippet.thumbnails.default.url;
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    const fetchChannelImages = async () => {
+      const videosWithImages = await Promise.all(
+        videos.map(async (video) => {
+          const channelImageUrl = await fetchChannelDetails(
+            video.snippet.channelId
+          );
+          return {
+            ...video,
+            channelImageUrl,
+          };
+        })
+      );
+
+      setVideos(videosWithImages);
+    };
+
+    fetchChannelImages();
+  }, [videos]);
+
   return (
     <div>
       <input
@@ -75,7 +117,6 @@ const YouTubeSearch = () => {
         placeholder="Search YouTube videos"
       />
       <button onClick={handleSearch}>Search</button>
-
       <ul>
         {videos.map((video) => (
           <li key={video.id.videoId}>
@@ -86,6 +127,12 @@ const YouTubeSearch = () => {
             <div>
               <h3>{video.snippet.title}</h3>
               <p>Channel: {video.snippet.channelTitle}</p>
+              {video.channelImageUrl && (
+                <img
+                  src={video.channelImageUrl}
+                  alt={video.snippet.channelTitle}
+                />
+              )}
               <p>
                 Views: {formatViewCount(video.statistics?.viewCount) || "N/A"}
               </p>
