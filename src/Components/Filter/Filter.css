@@ -1,0 +1,40 @@
+.filter {
+  grid-area: filter;
+  background: #0f0f0f;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.filter::-webkit-scrollbar {
+  display: none;
+}
+
+.filter__button {
+  height: 32px;
+  outline: 1px solid black;
+  display: flex;
+  align-items: center;
+  background-color: #3f3f3f;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-right: 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.filter__button:hover {
+  background-color: #5a5a5a;
+  cursor: pointer;
+}
+
+.filter__text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  white-space: nowrap;
+}

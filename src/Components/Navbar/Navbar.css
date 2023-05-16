@@ -1,0 +1,116 @@
+.navbar {
+  grid-area: navbar;
+  height: 56px;
+  background: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.flex-direction {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__hamburger {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.navbar__hamburger:hover {
+  background-color: #3f3f3f;
+}
+
+.navbar__logo {
+  padding-left: 16px;
+  padding-right: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__searchBar {
+  height: 38px;
+  width: 520px;
+  outline: 1px solid #303030;
+  border: none;
+  background-color: #121212;
+  border-radius: 40px 0 0 40px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-left: 16px;
+}
+
+.navbar__searchButton {
+  height: 40px;
+  width: 64px;
+  border-radius: 0 40px 40px 0;
+  border: none;
+  background-color: #222222;
+  outline: 1px solid #303030;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.navbar__microphone {
+  width: 40px;
+  height: 40px;
+  background-color: #181818;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.navbar__microphone:hover {
+  background-color: #3f3f3f;
+}
+
+.navbar__camera {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.navbar__camera:hover {
+  background-color: #3f3f3f;
+}
+
+.navbar__bell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.navbar__bell:hover {
+  background-color: #3f3f3f;
+}
+
+.navbar__acount {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #689f39;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 22px;
+}

@@ -1,31 +1,18 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
+import MainContent from "./Components/MainContent/MainContent";
+import Filter from "./Components/Filter/Filter";
+import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App() {
   return (
     <div className="App">
-      <div class="navbar">navbar</div>
-      <div class="filter">filter</div>
-      <div class="main-content">main-content</div>
-      <div class="sidebar">sidebar</div>
+      <Navbar />
+      <Filter />
+      <MainContent />
+      <Sidebar />
     </div>
   );
 }
-
-// function MainSection() {
-//   return <div className="main-section"></div>;
-// }
-
-// function Filter() {
-//   return <div className="filter"></div>;
-// }
-
-// function Sidebar() {
-//   return <div className="sidebar"></div>;
-// }
-
-// function Navbar() {
-//   return <div className="navbar"></div>;
-// }
 
 export default App;
