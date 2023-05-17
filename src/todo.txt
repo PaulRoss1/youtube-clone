@@ -1,0 +1,27 @@
+
+
+find out why the app is going in an infinite loop
+    -start on line 120 and make my way back
+
+-go through code and try to understand it all   
+    -if I dont' understand parts - chatGPT
+
+
+
+
+API call
+    -go through code and try to understand it all   
+        -if I dont' understand parts - chatGPT
+    -try to break the app into three componenets
+        -app, search, results
+    -do the same but with chatGPT 
+        -compare my version with chatGPT version
+    
+
+
+
+get detailed information from chat GPT about how to api call workds
+add api call to static satic site
+add filter functionality - just search keyword 
+router? other pages?
+add light mode?
