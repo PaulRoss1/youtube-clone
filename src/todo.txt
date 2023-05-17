@@ -1,4 +1,13 @@
- add filter functionality - just search keyword 
+
+learn router - do tutorial
+    -https://www.youtube.com/watch?v=Ul3y1LXxzdU
+
+
+
+---------------------------------------------------
+learn router - do tutorial
+    -https://www.youtube.com/watch?v=Ul3y1LXxzdU
+add filter functionality - just search keyword 
 router? other pages?
 add light mode?
 
@@ -6,3 +15,4 @@ add light mode?
 bug fixes:
 press enter to search
 remove channel image?
+some of the titles have symbols in them

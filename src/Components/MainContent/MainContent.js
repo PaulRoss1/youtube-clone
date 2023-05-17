@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 dayjs.extend(relativeTime);
 
-const VideoTile = ({ videos }) => {
+const VideoTiles = ({ videos }) => {
   const formatViewCount = (views) => {
     if (views >= 1e9) {
       return (views / 1e9).toFixed(1) + "B";
@@ -66,7 +66,7 @@ const VideoTile = ({ videos }) => {
 export default function MainContent({ videos }) {
   return (
     <div className="main-content">
-      <VideoTile videos={videos} />
+      <VideoTiles videos={videos} />
     </div>
   );
 }
