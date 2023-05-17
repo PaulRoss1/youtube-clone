@@ -3,6 +3,10 @@
   background: #0f0f0f;
 }
 
+.main-content__list {
+  padding-left: 0;
+}
+
 .main-content__tile {
   height: 202px;
   margin-left: 48px;
@@ -14,6 +18,8 @@
 
 .main-content__image {
   border-radius: 10px;
+  min-width: 360px;
+  object-fit: cover;
 }
 
 .main-content__video-info {

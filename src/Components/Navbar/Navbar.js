@@ -82,10 +82,16 @@ const YoutubeLogo = () => (
   </div>
 );
 
-const SearchBar = () => (
+const SearchBar = ({ searchTerm, setSearchTerm, handleSearch }) => (
   <>
-    <input className="navbar__searchBar"></input>
-    <button className="navbar__searchButton">
+    <input
+      type="text"
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      placeholder="Search"
+      className="navbar__searchBar"
+    ></input>
+    <button onClick={handleSearch} className="navbar__searchButton">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -159,7 +165,7 @@ const Bell = () => (
 
 const Account = () => <div className="navbar__acount">P</div>;
 
-export default function Navbar() {
+export default function Navbar({ searchTerm, setSearchTerm, handleSearch }) {
   return (
     <div className="navbar">
       <div className="flex-direction">
@@ -167,7 +173,11 @@ export default function Navbar() {
         <YoutubeLogo />
       </div>
       <div className="flex-direction">
-        <SearchBar />
+        <SearchBar
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          handleSearch={handleSearch}
+        />
         <Microphone />
       </div>
       <div className="flex-direction">
